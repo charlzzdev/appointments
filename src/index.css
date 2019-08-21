@@ -41,6 +41,9 @@ button{
   width: 6rem;
   cursor: pointer;
   font-size: 0.84rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 button:hover{
@@ -56,3 +59,24 @@ input{
   width: 100%;
   font-size: 1rem;
 }
+
+.loading{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid transparent;
+  margin-right: 4px;
+
+  animation: spin 750ms linear infinite;
+}
+
+.error{
+  color: tomato;
+  margin-bottom: 0.75rem;
+  font-size: 0.84rem;
+}
+
+@keyframes spin{ to{transform: rotateZ(360deg)} }
