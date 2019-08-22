@@ -21,7 +21,7 @@ function App() {
   return (
     <BrowserRouter>
       <Route exact path="/" component={({ history }) => <Signin history={history} setUser={setUser} />} />
-      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/signup" component={({ history }) => <Signup history={history} setUser={setUser} />} />
       <Route exact path="/dashboard" component={() => <Dashboard user={user} />} />
     </BrowserRouter>
   );
