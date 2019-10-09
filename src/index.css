@@ -80,3 +80,77 @@ input{
 }
 
 @keyframes spin{ to{transform: rotateZ(360deg)} }
+
+.dashboard{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 15fr;
+  grid-template-columns: 1fr 5fr;
+  color: #333;
+}
+
+.dashboard .sidebar{
+  border-right: 2px solid #eee;
+  grid-row: span 2;
+}
+
+.dashboard .sidebar a{
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.dashboard .sidebar a:hover{
+  background: #eee;
+}
+
+.dashboard .header{
+  border-bottom: 2px solid #eee;
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.dashboard .content{
+  padding: 2rem 3rem;
+}
+
+.dashboard .content h1{
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard .content article{
+  background: #f9f9f9;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px #ddd;
+}
+
+.dashboard .content article p{
+  margin: 1rem 0;
+  color: #444;
+}
+
+.dashboard .content article .buttons button{
+  display: inline-block;
+  margin: 1rem 0;
+  margin-right: 1rem;
+}
+
+.buttons .missed{
+  background: #f50b2a;
+}
+
+.buttons .missed:hover{
+  background: #e90e2b;
+}
+
+.buttons .delayed{
+  background: #f5b70b;
+}
+
+.buttons .delayed:hover{
+  background: #e9ae0b;
+}
