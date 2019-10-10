@@ -154,3 +154,34 @@ input{
 .buttons .delayed:hover{
   background: #e9ae0b;
 }
+
+.menuicon-wrapper{
+  display: none;
+}
+
+@media (max-width: 700px){
+  .dashboard{
+    grid-template-columns: 1fr;
+  }
+  .dashboard .sidebar{
+    transform: translateX(-100%);
+    position: fixed;
+    background: #fff;
+    width: 75vw;
+    box-shadow: 0 2px 10px #888;
+    height: 100vh;
+    transition: 300ms;
+  }
+  .dashboard .sidebar.open{
+    transform: translateX(0);
+  }
+  .dashboard .content article .buttons button{
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+  .menuicon-wrapper{
+    display: block;
+    position: absolute;
+    right: 15px;
+  }
+}
