@@ -6,6 +6,8 @@ const Dashboard = ({ user }) => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   useEffect(() => {
+    let isSubscribed = true;
+
     let startTouch;
     document.addEventListener('touchstart', e => startTouch = { x: e.touches[0].clientX, y: e.touches[0].clientY });
     document.addEventListener('touchmove', e => {
@@ -13,12 +15,14 @@ const Dashboard = ({ user }) => {
 
       if (movingTouch.y > startTouch.y - 50 && movingTouch.y < startTouch.y + 50) {
         if (movingTouch.x > startTouch.x + 100) {
-          setOpenSidebar(true);
+          isSubscribed && setOpenSidebar(true);
         } else if (movingTouch.x < startTouch.x - 100) {
-          setOpenSidebar(false);
+          isSubscribed && setOpenSidebar(false);
         }
       }
     });
+
+    return () => isSubscribed = false;
   }, []);
 
   if (!user.email) return <Redirect to="/" />;
