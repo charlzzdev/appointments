@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
-import Dashboard from './components/Dashboard';
+import Home from './components/Home';
+import Profile from './components/Profile';
 import firebase from 'firebase/app';
 
 firebase.initializeApp({
@@ -22,7 +23,8 @@ function App() {
     <BrowserRouter>
       <Route exact path="/" component={({ history }) => <Signin history={history} setUser={setUser} />} />
       <Route exact path="/signup" component={({ history }) => <Signup history={history} setUser={setUser} />} />
-      <Route exact path="/dashboard" component={() => <Dashboard user={user} />} />
+      <Route exact path="/dashboard" component={() => <Home user={user} />} />
+      <Route exact path="/dashboard/profile" component={() => <Profile user={user} />} />
     </BrowserRouter>
   );
 }
