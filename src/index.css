@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
 
-body, input, button{
-  font-family: 'Lexend Deca', sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .signin-form{
@@ -50,7 +47,7 @@ button:hover{
   background: #15ac59;
 }
 
-input{
+input, textarea{
   margin-bottom: 1.5rem;
   border: 1px solid #dadce0;
   border-radius: 5px;
@@ -112,7 +109,7 @@ input{
 }
 
 .dashboard .content{
-  padding: 2rem 3rem;
+  padding: 2rem;
 }
 
 .dashboard .content h1{
@@ -157,6 +154,32 @@ input{
 
 .menuicon-wrapper{
   display: none;
+}
+
+.upper-profile{
+  display: flex;
+  align-items: center;
+}
+
+.upper-profile img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.upper-profile h1{
+  border: 0 !important;
+  padding-left: 1rem;
+}
+
+textarea{
+  resize: none;
+  height: 8rem;
+  margin-top: 2rem;
+}
+
+:focus{
+  outline: 2px solid #17bf63;
 }
 
 @media (max-width: 700px){
