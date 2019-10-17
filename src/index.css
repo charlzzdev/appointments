@@ -214,6 +214,44 @@ summary::-webkit-details-marker{
   outline: 2px solid #17bf63;
 }
 
+.notification{
+  position: absolute;
+  top: -3rem;
+  right: 2rem;
+  padding: 1rem;
+  margin: 0;
+  box-shadow: 0 0 10px #dadada;
+  border-radius: 5px;
+  animation: notification 5s forwards;
+}
+
+@keyframes notification{
+  10%{
+    top: 2rem;
+  }
+  90%{
+    top: 2rem;
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.success{
+  background: #17bf63;
+  color: #fff;
+}
+
+.failure{
+  background: #f50b2a;
+  color: #fff;
+}
+
+.warning{
+  background: #f5b70b;
+}
+
 @media (max-width: 700px){
   .dashboard{
     grid-template-columns: 1fr;
