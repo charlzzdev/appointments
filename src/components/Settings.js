@@ -1,6 +1,5 @@
 import React from 'react';
 import Dashboard from './Dashboard';
-import PopupInput from './PopupInput';
 
 const Settings = ({ user }) => {
   return (
@@ -8,21 +7,21 @@ const Settings = ({ user }) => {
       <h1>email@email.email</h1>
       <div className="settings">
         <h2>Account settings</h2>
-        <div>
-          <strong>First name:</strong> John Doe
-          <PopupInput placeholder="New name" />
+        <div className="with-label">
+          <input id="name" defaultValue="John Doe" />
+          <label htmlFor="name">Name</label>
         </div>
-        <div>
-          <strong>Phone number:</strong> 43278784
-          <PopupInput placeholder="New phone #" />
+        <div className="with-label">
+          <input id="number" defaultValue="3747734283" />
+          <label htmlFor="number">Phone number</label>
         </div>
-        <div>
-          <strong>Email:</strong> email@email.email
-          <PopupInput placeholder="New email" />
+        <div className="with-label">
+          <input id="email" defaultValue="email@email.email" />
+          <label htmlFor="email">Email</label>
         </div>
-        <div>
-          <strong>Password:</strong>
-          <PopupInput placeholder="New password" />
+        <div className="with-label">
+          <input placeholder="New password" type="password" id="password" />
+          <label htmlFor="password">Password</label>
         </div>
       </div>
     </Dashboard>

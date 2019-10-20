@@ -182,6 +182,10 @@ textarea{
   margin-top: 1rem;
 }
 
+.settings input{
+  width: 15rem;
+}
+
 details{
   display: inline-block;
   position: relative;
@@ -250,6 +254,29 @@ summary::-webkit-details-marker{
 
 .warning{
   background: #f5b70b;
+}
+
+.with-label{
+  position: relative;
+}
+
+.with-label label{
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  background: #fff;
+  padding: 0 5px;
+  color: #aaa;
+}
+
+input:focus + label::after{
+  content: 'Save';
+  position: absolute;
+  top: 1.5rem;
+  left: 15rem;
+  color: #17bf63;
+  cursor: pointer;
+  border-bottom: 2px solid #17bf63;
 }
 
 @media (max-width: 700px){
